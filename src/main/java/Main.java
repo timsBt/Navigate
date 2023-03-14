@@ -8,6 +8,7 @@ import java.time.Duration;
 public class Main {
 
     public static void main(String[] args) {
+
         System.setProperty("webserver.chrome.driver","C:\\Tools\\ChromDraivers\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -29,8 +30,8 @@ public class Main {
         elementTo.click();
         elementTo.sendKeys("Комсомольский проспект, 18");
 
-        WebElement elementSvo = driver.findElement(By.id("form-mode-custom"));
-        elementSvo.click();
+        WebElement elementSvoy = driver.findElement(By.id("form-mode-custom"));
+        elementSvoy.click();
 
         WebElement elementtaxi = driver.findElement(By.id("from-type-taxi"));
         elementtaxi.click();
