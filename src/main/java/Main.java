@@ -7,8 +7,6 @@ import java.time.Duration;
 
 public class Main {
 
-    WebElement noviy;
-
     public static void main(String[] args) {
         System.setProperty("webserver.chrome.driver","C:\\Tools\\ChromDraivers\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
@@ -34,9 +32,8 @@ public class Main {
         WebElement elementSvo = driver.findElement(By.id("form-mode-custom"));
         elementSvo.click();
 
-        WebElement elementTaxi = driver.findElement(By.id("from-type-taxi"));
-        elementTaxi.click();
-
+        WebElement elementtaxi = driver.findElement(By.id("from-type-taxi"));
+        elementtaxi.click();
 
     }
 
