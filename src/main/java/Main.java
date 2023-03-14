@@ -7,7 +7,7 @@ import java.time.Duration;
 
 public class Main {
 
-    WebElement elemeeeeeeent;
+    WebElement elemeeeeeeeeeeeent;
 
     public static void main(String[] args) {
         System.setProperty("webserver.chrome.driver","C:\\Tools\\ChromDraivers\\chromedriver.exe");
