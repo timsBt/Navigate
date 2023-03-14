@@ -29,12 +29,12 @@ public class Main {
         elementTo.click();
         elementTo.sendKeys("Комсомольский проспект, 18");
 
-        WebElement elementSvoy = driver.findElement(By.id("form-mode-custom"));
-        elementSvoy.click();
+        WebElement elementSvo = driver.findElement(By.id("form-mode-custom"));
+        elementSvo.click();
 
         WebElement elementtaxi = driver.findElement(By.id("from-type-taxi"));
         elementtaxi.click();
-
+        
 
     }
 
