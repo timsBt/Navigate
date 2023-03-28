@@ -12,11 +12,24 @@ public class Main {
 
         WebDriver driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        driver.get("https://qa-routes.praktikum-services.ru/");
+        driver.get("https://www.globalsqa.com/angularJs-protractor/BankingProject/#/manager");
 
-        WebElement element = driver.findElement(By.xpath("//input[@id='form-input-hour']"));
+        WebElement element = driver.findElement(By.cssSelector(".btn.btn-lg.tab"));
         element.click();
-        element.sendKeys("15");
+
+        WebElement element2 = driver.findElement(By.cssSelector(".form-control.ng-pristine.ng-invalid.ng-invalid-required.ng-touched"));
+        element2.click();
+
+
+       // (By.xpath("//input[@class = 'form-control.ng-pristine.ng-invalid.ng-invalid-required.ng-touched']"));
+
+
+
+
+
+/*
+
+
 
         WebElement elementMinutes = driver.findElement(By.xpath("//input[@id='form-input-minute']"));
         elementMinutes.click();
@@ -34,10 +47,10 @@ public class Main {
         elementSvoy.click();
 
         WebElement elementtaxi = driver.findElement(By.id("from-type-taxi"));
-        elementtaxi.click();
+        elementtaxi.click();*/
+
 
         driver.quit();
-        
 
     }
 
