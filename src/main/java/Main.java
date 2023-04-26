@@ -3,13 +3,13 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.WebDriver;
 import java.time.Duration;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 
 public class Main {
 
     public static void main(String[] args) {
 
-        System.setProperty("webserver.chrome.driver","C:\\Tools\\ChromDraivers\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.get("https://qa-routes.praktikum-services.ru/");
@@ -35,6 +35,8 @@ public class Main {
 
         WebElement elementtaxi = driver.findElement(By.id("from-type-taxi"));
         elementtaxi.click();
+
+        driver.quit();
         
 
     }
