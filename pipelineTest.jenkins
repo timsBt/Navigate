@@ -3,7 +3,7 @@
      stages {
          stage('Build') {
              steps {
-                 bat docker-compose -f docker-compose.yml up -d
+               sh 'mvn clean test'
              }
          }
      }
