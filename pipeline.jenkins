@@ -18,10 +18,6 @@
            	        }
                   }
 
-                     stage('exit') {
-                          steps {
-                        	  bat 'docker-compose -f docker-compose.yml --abort-on-container-exit'
-                              }
-                          }
+
  }
  }
