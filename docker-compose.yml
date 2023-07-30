@@ -2,7 +2,7 @@ version: '3.5'
 services:
   selenoid:
     network_mode: bridge
-    container_name: selenoid
+    container_name: selenoidDDDD
     image: "aerokube/selenoid:latest-release"
     ports:
       - "4443:4444"
@@ -12,7 +12,7 @@ services:
     command: ["-conf", "/etc/selenoid/browsers.json", "UIautotests_selenoid", "-limit", "10", "-retry-count", "2"]
   selenoid-ui:
     network_mode: bridge
-    container_name: selenoid-ui
+    container_name: selenoid-uiDDDD
     image: "aerokube/selenoid-ui:latest-release"
     links:
       - selenoid
