@@ -3,8 +3,25 @@
  stages {
       stage('Build') {
         steps {
-      	  bat 'docker-compose -f docker-compose.yml up --abort-on-container-exit'
+      	  bat 'docker-compose -f docker-compose.yml up'
             }
         }
+              stage('Reports') {
+                 steps {
+                    allure([
+               	   includeProperties: false,
+               	   jdk: '',
+               	   properties: [],
+               	   reportBuildPolicy: 'ALWAYS',
+               	   results: [[path: 'target/allure-results']]
+             	   ])
+           	        }
+                  }
+
+                     stage('exit') {
+                          steps {
+                        	  bat '--abort-on-container-exit'
+                              }
+                          }
  }
  }
